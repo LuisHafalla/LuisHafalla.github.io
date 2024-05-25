@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration Form</title>
+    <style>
+        body {
+            background-color: #f0f0f0; /* light gray background */
+        }
+        form {
+            background-color: #007bff; /* blue background */
+            padding: 20px;
+            border-radius: 10px;
+            color: white; /* white text color */
+            width: 300px;
+            margin: 0 auto; /* center the form */
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: none;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0056b3; /* darker blue submit button */
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #004080; /* darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Employee Registration Form</h2>
+    <form action="#" method="post">
+        <label for="name">Employee name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+        
+        <label for="marital_status">Marital status:</label>
+        <select id="marital_status" name="marital_status" required>
+            <option value="" disabled selected>Please select</option>
+            <option value="single">Single</option>
+            <option value="married">Married</option>
+            <option value="divorced">Divorced</option>
+            <option value="widowed">Widowed</option>
+        </select><br><br>
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+        
+        <label for="address">Home Address:</label>
+        <textarea id="address" name="address" rows="4" required></textarea><br><br>
+        
+        <input type="submit" value="Register New Employee">
+    </form>
+</body>
+</html>
