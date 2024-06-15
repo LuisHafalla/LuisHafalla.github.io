@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Pretty Tartlet</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .card {
+            border: 2px solid transparent; /* Transparent border initially */
+        }
+        .card:hover {
+            border-color: #007bff; /* Highlight border color on hover */
+        }
+        .card-title a {
+            color: inherit; /* Maintain inherited color */
+            text-decoration: none; /* Remove underline */
+            cursor: pointer; /* Pointer cursor */
+        }
+        .card-title a:hover {
+            color: #0056b3; /* Change color on hover */
+        }
+        .tab-content {
+            display: none; /* Hide all tab content initially */
+        }
+        .tab-content.active {
+            display: block; /* Show active tab content */
+        }
+        body {
+            background: url('https://images.pexels.com/photos/776635/pexels-photo-776635.jpeg?cs=srgb&dl=pexels-nietjuh-776635.jpg&fm=jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #0c0b0b;
+        }
+        .container-content {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 2rem;
+            border-radius: 8px;
+            color: #0c0c0c;
+        }
+        .img-thumbnail {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container text-center my-4">
+        <h1 class="mb-4">My Pretty Tartlet</h1>
+        
+        <!-- Main Page Content -->
+        <div id="main" class="tab-content active">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/418431689_1512397269336156_7453842539551575803_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=4lbEdIYTzjgQ7kNvgHRVN2o&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QGvOtUzPytQ16spmFW_56RQWjG8ymzJnTurD_CHDwWoBA&oe=669440E3" class="card-img-top img-fluid" alt="Friend 1">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a onclick="showTab('friend1')">Pretty</a>
+                            </h5>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/420527209_389730303764686_3456861581795868995_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=MilK6l4qWiUQ7kNvgHmn95b&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QGxNsPtjHZ-14Iyd2aRljucZf9UCVzxsJfq5wR0OqyIKA&oe=66945F35" class="card-img-top img-fluid" alt="Friend 2">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a onclick="showTab('friend2')">Royce</a>
+                            </h5>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/418467447_606904774965119_6190894004684302404_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=qBIHRVGi1_UQ7kNvgFV5Ac-&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QEJqTLOfk3atzBjDwkk6TXJGF-DsCk5pZS9-9aJA9SIug&oe=66945435" class="card-img-top img-fluid" alt="Friend 3">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a onclick="showTab('friend3')">Ann</a>
+                            </h5>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Friend 1 Details -->
+        <div id="friend1" class="tab-content container-content">
+            <h1 class="mb-4">Friend 1 Details</h1>
+            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/418431689_1512397269336156_7453842539551575803_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=4lbEdIYTzjgQ7kNvgHRVN2o&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QGvOtUzPytQ16spmFW_56RQWjG8ymzJnTurD_CHDwWoBA&oe=669440E3" class="img-thumbnail" alt="Pretty">
+            <p class="mt-3">She shows deep concern and affection, always prioritizing the well-being of those around her.</p>
+            <p><a onclick="showTab('main')" class="btn btn-primary">Back to Main Page</a></p>
+        </div>
+
+        <!-- Friend 2 Details -->
+        <div id="friend2" class="tab-content container-content">
+            <h1 class="mb-4">Friend 2 Details</h1>
+            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/420527209_389730303764686_3456861581795868995_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=MilK6l4qWiUQ7kNvgHmn95b&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QGxNsPtjHZ-14Iyd2aRljucZf9UCVzxsJfq5wR0OqyIKA&oe=66945F35" class="img-thumbnail" alt="Royce">
+            <p class="mt-3">Whether it's in personal endeavors or tough times, she stands by your side, offering unwavering support.</p>
+            <p><a onclick="showTab('main')" class="btn btn-primary">Back to Main Page</a></p>
+        </div>
+
+        <!-- Friend 3 Details -->
+        <div id="friend3" class="tab-content container-content">
+            <h1 class="mb-4">Friend 3 Details</h1>
+            <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/418467447_606904774965119_6190894004684302404_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=qBIHRVGi1_UQ7kNvgFV5Ac-&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QEJqTLOfk3atzBjDwkk6TXJGF-DsCk5pZS9-9aJA9SIug&oe=66945435" class="img-thumbnail" alt="Ann">
+            <p class="mt-3">Her infectious laughter and positive outlook bring happiness to everyone she meets, creating a warm and inviting atmosphere.</p>
+            <p><a onclick="showTab('main')" class="btn btn-primary">Back to Main Page</a></p>
+        </div>
+
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all tab content
+            var tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(function(tab) {
+                tab.classList.remove('active');
+            });
+
+            // Show the selected tab content
+            var selectedTab = document.getElementById(tabId);
+            selectedTab.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
