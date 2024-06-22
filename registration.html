@@ -50,10 +50,28 @@
         function validateForm() {
             var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
-            if (username === "" || password === "") {
-                alert("All fields must be filled out.");
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var usernameMinLength = 5;
+            var passwordMinLength = 8;
+
+            if (username.length < usernameMinLength) {
+                alert("Username must be at least " + usernameMinLength + " characters long.");
                 return false;
             }
+
+            var passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).{8,}$/;
+            if (!passwordRegex.test(password)) {
+                alert("Password must be at least " + passwordMinLength + " characters long and include at least one number, one uppercase letter, and one special character.");
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            alert("Registration successful!");
+            window.location.href = "login.html";
             return true;
         }
     </script>
@@ -63,9 +81,11 @@
         <h2>Registration Form</h2>
         <form onsubmit="return validateForm()">
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username">
+            <input type="text" id="username" name="username" required>
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
+            <input type="password" id="password" name="password" required>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
             <input type="submit" value="Submit Me">
         </form>
     </div>
