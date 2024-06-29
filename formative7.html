@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEU Login</title>
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('https://scontent.fmnl38-1.fna.fbcdn.net/v/t39.30808-6/406532909_751583540336549_8282989023449231640_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=86c6b0&_nc_ohc=E0D0tL3p0-EQ7kNvgGCNqL1&_nc_ht=scontent.fmnl38-1.fna&oh=00_AYBMD5HOpZ4z7kpZBGJQAyjyHEFsNjdE_Z6sywdaiCVC-w&oe=66860A15');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            background-color: rgba(54, 69, 79, 0); 
+            border-radius: 8px;
+        }
+
+        .login-container form {
+            box-shadow: none; 
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .header img {
+            width: 120px; 
+        }
+
+        .header a {
+            color: #66bb6a;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .header a:hover {
+            text-decoration: underline;
+        }
+
+        .form-control {
+            background-color: #263238;
+            color: #fff;
+            border: none; 
+            border-radius: 0; 
+            box-shadow: none; 
+        }
+
+        .btn-primary {
+            background-color: #66bb6a;
+            border: none;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .btn-primary:hover {
+            background-color: #4caf50;
+        }
+
+        .text-white a {
+            color: #66bb6a;
+            text-decoration: none;
+        }
+
+        .text-white a:hover {
+            text-decoration: underline;
+        }
+
+        .form-group {
+            text-align: left;
+        }
+
+        .form-check {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .forgot-password {
+            margin-top: 5px;
+            text-align: left;
+        }
+
+        .login-button-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+            position: relative; 
+        }
+
+        .login-button-container::before {
+            content: "";
+            position: absolute;
+            bottom: -10px; 
+            width: 100%;
+            height: 1px;
+            background-color: #fff;
+        }
+
+        .login-with-microsoft {
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            margin-top: 20px; 
+        }
+
+        .login-with-microsoft a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 10px; 
+        }
+
+        .login-with-microsoft img {
+            width: 24px;
+        }
+
+        .footer-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="header">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d7/Far_Easter_University_Logo.svg/320px-Far_Easter_University_Logo.svg.png" alt="FEU Logo"> 
+            <a href="#">Browse courses</a>
+        </div>
+        <form action="#" method="post" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <div class="form-check">
+                <div>
+                    <input type="checkbox" class="form-check-input" id="staySignedIn">
+                    <label class="form-check-label" for="staySignedIn">Stay signed in</label>
+                </div>
+            </div>
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+            <div class="login-button-container">
+                <button type="submit" class="btn btn-primary">Log In</button>
+            </div>
+        </form>
+        <div class="login-with-microsoft">
+            <a href="https://account.microsoft.com/account/Account" target="_blank">Log in with Microsoft</a>
+            <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" alt="Microsoft Logo">
+        </div>
+        <div class="footer-links text-white">
+            <a href="#">Help</a>&nbsp;&nbsp;
+            <a href="#">Privacy Policy</a>&nbsp;&nbsp;
+            <a href="#">Cookie Notice</a>&nbsp;&nbsp;
+            <a href="#">Acceptable Use Policy</a>&nbsp;&nbsp;
+            <a href="#">Facebook</a>&nbsp;&nbsp;
+            <a href="#">Twitter</a>
+        </div>
+        <div class="logo-container">
+            <a href="https://www.instructure.com/" target="_blank">
+                <img src="https://www.instructure.com/themes/custom/themekit/logo.svg" alt="Instructure Logo" style="width: 80px;">
+            </a>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if (username == "" || password == "") {
+                alert("Username and Password must be filled out");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html>
